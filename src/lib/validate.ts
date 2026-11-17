@@ -10,6 +10,9 @@ export const validate = (fields: FieldDef[], values: FormValues): FormErrors => 
     else if (f.type === "email" && typeof v === "string" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
       errors[f.id] = "Enter a valid email address.";
     }
+    else if (f.type === "url" && typeof v === "string" && !/^https?:\/\/[^\s.]+(?:\.[^\s.]+)+(?:[/:?#][^\s]*)?$/i.test(v)) {
+      errors[f.id] = "Enter a valid URL starting with http:// or https://.";
+    }
   }
   return errors;
 };

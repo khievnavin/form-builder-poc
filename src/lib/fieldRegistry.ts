@@ -21,6 +21,18 @@ export const FIELD_REGISTRY: FieldMeta[] = [
     create: () => ({ type: "email", label: "Email address", placeholder: "name@example.com" }),
   },
   {
+    type: "phone",
+    title: "Phone",
+    description: "Telephone number",
+    create: () => ({ type: "phone", label: "Phone number", placeholder: "+1 555 123 4567" }),
+  },
+  {
+    type: "url",
+    title: "Website URL",
+    description: "Web address",
+    create: () => ({ type: "url", label: "Website", placeholder: "https://example.com" }),
+  },
+  {
     type: "number",
     title: "Number",
     description: "Numeric answer",
@@ -59,6 +71,12 @@ export const FIELD_REGISTRY: FieldMeta[] = [
     title: "Date",
     description: "Calendar date",
     create: () => ({ type: "date", label: "Date" }),
+  },
+  {
+    type: "time",
+    title: "Time",
+    description: "Time of day",
+    create: () => ({ type: "time", label: "Time" }),
   },
 ];
 

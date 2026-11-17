@@ -33,6 +33,14 @@ export function FieldRenderer({ def, value, onChange, error, disabled, idPrefix 
       control = <input {...common} className="input" type="email" placeholder={def.placeholder} value={str}
         onChange={(e) => onChange?.(e.target.value)} />;
       break;
+    case "phone":
+      control = <input {...common} className="input" type="tel" placeholder={def.placeholder} value={str}
+        onChange={(e) => onChange?.(e.target.value)} />;
+      break;
+    case "url":
+      control = <input {...common} className="input" type="url" placeholder={def.placeholder} value={str}
+        onChange={(e) => onChange?.(e.target.value)} />;
+      break;
     case "number":
       control = <input {...common} className="input" type="number" value={str}
         onChange={(e) => onChange?.(e.target.value)} />;
@@ -71,6 +79,9 @@ export function FieldRenderer({ def, value, onChange, error, disabled, idPrefix 
       control = (
         <input {...common} className="input" type="date" value={str} onChange={(e) => onChange?.(e.target.value)} />
       );
+      break;
+    case "time":
+      control = <input {...common} className="input" type="time" value={str} onChange={(e) => onChange?.(e.target.value)} />;
       break;
     case "checkbox":
       control = (

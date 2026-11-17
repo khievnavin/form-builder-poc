@@ -16,7 +16,7 @@ export function PropertyPanel({ field, onChange }: PropertyPanelProps) {
     );
   }
 
-  const hasPlaceholder = field.type === "text" || field.type === "email" || field.type === "textarea";
+  const hasPlaceholder = field.type === "text" || field.type === "email" || field.type === "phone" || field.type === "url" || field.type === "textarea";
 
   return (
     <section className="panel" aria-labelledby="props-title">
